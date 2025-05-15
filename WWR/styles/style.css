@@ -119,3 +119,10 @@ footer a {
 footer p a:hover {
   text-decoration: underline;
 }
+
+.section-break {
+    height: 150px;
+    width: 100%;
+    background-color: #444; /* or any color from your palette */
+    margin: 40px 0; /* optional space above and below */
+}
