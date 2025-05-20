@@ -1,6 +1,18 @@
-/* General Body Styling */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rock+Salt&display=swap');
+
+/* General Body Styling and Reset */
 body {
   background-color: #fcfbfb;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset for h2 */
+h2 {
+  margin: 0;
 }
 
 /* Container for entire page */
@@ -14,11 +26,26 @@ header {
   background-color: rgba(20, 30, 13, 0.7);
 }
 
+/* Logo and Icon Styling */
+#logo_link {
+  padding-top: 5px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.icon {
+  width: 80px;
+  padding-top: 10px;
+}
+
 /* Navigation Links */
 nav a {
   text-align: center;
   color: #fcfbfb;
   text-decoration: none;
+  padding: 35px;
 }
 
 nav a:hover {
@@ -37,12 +64,27 @@ nav a:hover {
   text-align: center;
 }
 
+/* Headline Styling */
+.home-title {
+  font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.msg h2 {
+  font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+}
+
 /* Button Styling */
 .book,
 .join {
-  background-color: #4CAF50; /* Example green */
+  background-color: #4CAF50;
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
 }
 
 .book:hover,
@@ -60,15 +102,22 @@ main section {
   text-align: center;
 }
 
+/* Add box-sizing to images */
+main section img {
+  box-sizing: border-box;
+}
+
 /* Background Div */
 #background {
   height: 725px;
-  background-color: #e0e0e0; /* Example light grey */
+  background-color: #e0e0e0;
 }
 
 /* Message Section */
 .msg {
   background-color: #ffffff;
+  line-height: 1.5em;
+  padding: 35px;
 }
 
 .msg h2 {
@@ -77,12 +126,16 @@ main section {
 
 .msg p {
   color: #555555;
+  font-size: 0.8em;
+  padding-bottom: 15px;
 }
 
 /* Footer Styling */
 footer {
   background-color: #333333;
   color: #ffffff;
+  padding: 25px 50px;
+  margin-top: 200px;
 }
 
 footer a {
@@ -99,13 +152,20 @@ footer p {
   font-size: 1.2em;
 }
 
-/* Logo and Icon Styling */
-.logo {
-  width: 80px;
+footer .social img {
+  padding-top: 15px;
 }
 
-.icon {
-  width: 80px;
+/* Card Image Border */
+.card-img {
+  border: 10px solid #d9c2a3;
+}
+
+/* Section Cards Margins */
+.rivers-card,
+.camping-card,
+.rapids-card {
+  margin: 200px 0;
 }
 
 /* Text Underlines Removed */
@@ -120,9 +180,10 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+/* Section Break Bar */
 .section-break {
-    height: 150px;
-    width: 100%;
-    background-color: #444; /* or any color from your palette */
-    margin: 40px 0; /* optional space above and below */
+  height: 150px;
+  width: 100%;
+  background-color: #444;
+  margin: 40px 0;
 }
