@@ -1,0 +1,186 @@
+/* CSS - Name: "positionstyles.css" */
+
+/* ------------------ Base Box Styles (All Activities) ------------------ */
+[class*="red"], [class*="green"], [class*="yellow"], [class*="blue"] {
+  width: 100px;
+  height: 100px;
+}
+
+.red1, .red2, .red3, .red4, .red5, .red6 { background-color: red; }
+.green1, .green2, .green3, .green4, .green5, .green6 { background-color: green; }
+.yellow1, .yellow2, .yellow3, .yellow4, .yellow5, .yellow6 { background-color: gold; }
+.blue1, .blue2, .blue3, .blue4, .blue5, .blue6 { background-color: blue; }
+
+/* ------------------ Activity 1 styles (Float Left) ------------------ */
+.content1 div {
+  float: left;
+  margin-right: 10px;
+}
+
+/* ------------------ Activity 2 styles (Float Right) ------------------ */
+.content2 div {
+  float: right;
+  margin-left: 10px;
+}
+
+/* ------------------ Activity 3 styles (Clearfix and Margin) ------------------ */
+.content3::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content3 div {
+  float: left;
+  margin: 10px;
+}
+
+/* ------------------ Activity 4 styles (Absolute Positioning) ------------------ */
+.content4 {
+  position: relative;
+  height: 400px;
+}
+.red4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.green4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.yellow4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.blue4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ------------------ Activity 5 styles (Fixed + Relative + Absolute + Sticky) ------------------ */
+.content5 {
+  height: 400px;
+  position: relative;
+}
+.red5 {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.green5 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.yellow5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.blue5 {
+  position: sticky;
+  top: 50px;
+}
+
+/* ------------------ Activity 6 styles (Z-Index Layering) ------------------ */
+.content6 {
+  position: relative;
+  height: 200px;
+}
+.red6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.green6 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+.yellow6 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 3;
+}
+.blue6 {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 4;
+}
+
+/* ------------------ Activity Container Styles ------------------ */
+.activity {
+  width: 70%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid black;
+  padding: 10px;
+  clear: both;
+  overflow: auto;
+}
+
+/* ------------------ Hint Box Styles (Do not change) ------------------ */
+.hint {
+  border: 1px solid grey;
+  background: #e0e0e0;
+  padding: .5em;
+  position: relative;
+  margin: 1em 0;
+}
+.hint h3 {
+  margin: 0;
+}
+.hint:hover {
+  background: #d0d0d0;
+}
+.hint > div {
+  display: none;
+}
+.hint input[type=checkbox] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.hint input[type=checkbox]:checked ~ div {
+  display: block;
+}
+.hint i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 10px;
+  top: -3px;
+}
+.hint i:before, .hint i:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 3px;
+  height: 9px;
+}
+.hint i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.hint i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.hint input[type=checkbox]:checked ~ i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.hint input[type=checkbox]:checked ~ i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.hint a {
+  position: relative;
+  z-index: 1;
+}
