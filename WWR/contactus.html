@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+    <style>
+        /* Basic styles for form layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+        }
+        label {
+            display: block;
+            margin-top: 1em;
+        }
+        input, textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.5em;
+            margin-top: 0.2em;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            font-size: 1em;
+        }
+
+        /* Feedback message styling */
+        #feedback {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 0.5em;
+            display: none; /* hidden initially */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Moves content down so feedback does not overlap */
+        .moveDown main {
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WWR Rafting Site</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="contactus.html">Contact Us</a>
+            <!-- Add other navigation links as needed -->
+        </nav>
+    </header>
+
+    <main>
+        <div id="feedback"></div>
+
+        <form>
+            <label for="user_name">Name:</label>
+            <input id="user_name" name="user_name" type="text" required />
+
+            <label for="user_email">Email:</label>
+            <input id="user_email" name="user_email" type="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 WWR Rafting. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the feedback div
+        const feedbackElement = document.getElementById('feedback');
+        // Get the first form on the page
+        const formElement = document.forms[0];
+
+        formElement.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+            // Show a personalized thank-you message
+            feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back with you as soon as possible!';
+            feedbackElement.style.display = "block";
+            // Add a class to the body to move content down so the message does not overlap
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
